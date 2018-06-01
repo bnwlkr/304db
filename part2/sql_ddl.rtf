@@ -24,47 +24,48 @@ CREATE TABLE User (id INT PRIMARY KEY, name CHAR(20), email CHAR(30))\
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\sl256\slmult1\partightenfactor0
 
 \f0\fs24 \cf0 \
-CREATE TABLE Metric (name CHAR(20), timestamp INT, ename CHAR(4), fees INT,
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\sl256\slmult1\partightenfactor0
+\cf0 CREATE TABLE Commodity (name CHAR(20) PRIMARY KEY)\
+\
+CREATE TABLE Exchange (name CHAR(4) PRIMARY KEY, website CHAR(30))\
+\
+CREATE TABLE Traded_On(exchange_name CHAR(20), commodity_name CHAR(20), 	PRIMARY KEY(exchange_name, commodity_name),\
+	FOREIGN KEY (exchange_name) REFERENCES Exchange(name),\
+	FOREIGN KEY (commodity_name) REFERENCES Commodity(name))\
+\
+CREATE TABLE Metric (name CHAR(20), timestamp INT, tradedon_commodity 			CHAR(4), tradedon_exchange CHAR(20),
 \f1\fs22 \
 
-\f0\fs24 	PRIMARY KEY(name, ename) 
+\f0\fs24 	PRIMARY KEY(name, exchange_name) 
 \f1\fs22 \
 
-\f0\fs24 	FOREIGN KEY (ename) 
+\f0\fs24 	FOREIGN KEY (tradedon_exchange, tradedon_commodity) 
 \f1\fs22 \
 
-\f0\fs24 		REFERENCES Exchange(name))
+\f0\fs24 		REFERENCES Traded_On(exchange_name, commodity_name))
 \f1\fs22 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\sl256\slmult1\partightenfactor0
 
-\f0\fs24 \
+\f0\fs24 \cf0 \
 CREATE TABLE Price (buy DOUBLE, sell DOUBLE)
 \f1\fs22 \
 \
 
-\f0\fs24 CREATE TABLE Volume (daily INT, hourly INT)
-\f1\fs22 \
-
-\f0\fs24 \
+\f0\fs24 CREATE TABLE Volume (daily INT, hourly INT)\
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\sl256\slmult1\partightenfactor0
 
 \f1\fs22 \cf0 \
-\
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\sl256\slmult1\partightenfactor0
 
-\f0\fs24 \cf0 CREATE TABLE Commodity (name CHAR(20) PRIMARY KEY)
-\f1\fs22 \
-
-\f0\fs24 \
-CREATE TABLE Coin (cointrend INT)
+\f0\fs24 \cf0 \
+CREATE TABLE Coin ()
 \f1\fs22 \
 \
 
-\f0\fs24 CREATE TABLE Stock (stocktrend INT)
+\f0\fs24 CREATE TABLE Stock (company_site CHAR(30))
 \f1\fs22 \
 \
-
-\f0\fs24 CREATE TABLE Exchange (name CHAR(4) PRIMARY KEY, website CHAR(30))
-\f1\fs22 \
+\
 
 \f0\fs24 \
 \
