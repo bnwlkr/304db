@@ -63,11 +63,13 @@ CREATE TABLE Trend (metric_name CHAR(20), value INT, source CHAR(30),\
 \f1\fs22 \
 
 \f0\fs24 \
-CREATE TABLE Coin ()
+CREATE TABLE Coin (commodity_name CHAR(20)\
+	FOREIGN KEY (commodity_name) REFERENCES Commodity(name))
 \f1\fs22 \
 \
 
-\f0\fs24 CREATE TABLE Stock (company_site CHAR(30))
+\f0\fs24 CREATE TABLE Stock (commodity_name CHAR (20), company_site CHAR(30)\
+	FOREIGN KEY (commodity_name) REFERENCES Commodity(name))
 \f1\fs22 \
 \
 \
