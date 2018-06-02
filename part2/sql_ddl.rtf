@@ -24,7 +24,7 @@ CREATE TABLE Trade (id INT, timestamp INT, price DOUBLE, user_id INT,  bought?BO
 
 \f0 		ON DELETE CASCADE)\
 \
-CREATE TABLE Account (exchange_name CHAR(20), user_id INT, balance INT,\
+CREATE TABLE Account (exchange_name CHAR(20), user_id INT, balance DOUBLE,\
 	PRIMARY KEY(exchange_name , user_id)\
 	FOREIGN KEY (exchange_name) REFERENCES Exchange(name)\
 	FOREGIN KEY(user_id) REFERENCES User(id))
