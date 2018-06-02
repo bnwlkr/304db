@@ -1,107 +1,117 @@
-{\rtf1\ansi\deff3\adeflang1025
-{\fonttbl{\f0\froman\fprq2\fcharset0 Times New Roman;}{\f1\froman\fprq2\fcharset2 Symbol;}{\f2\fswiss\fprq2\fcharset0 Arial;}{\f3\froman\fprq2\fcharset0 Liberation Serif{\*\falt Times New Roman};}{\f4\fswiss\fprq2\fcharset0 Liberation Sans{\*\falt Arial};}{\f5\froman\fprq2\fcharset0 Helvetica{\*\falt Arial};}{\f6\froman\fprq2\fcharset0 Times-Roman{\*\falt Times New Roman};}{\f7\fnil\fprq2\fcharset0 Noto Sans CJK SC Regular;}{\f8\fnil\fprq2\fcharset0 FreeSans;}{\f9\fswiss\fprq0\fcharset128 FreeSans;}}
-{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}
-{\stylesheet{\s0\snext0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105 Normal;}
-{\s15\sbasedon0\snext16\sb240\sa120\keepn\dbch\af7\dbch\af8\afs28\loch\f4\fs28 Heading;}
-{\s16\sbasedon0\snext16\sl288\slmult1\sb0\sa140 Text Body;}
-{\s17\sbasedon16\snext17\sl288\slmult1\sb0\sa140\dbch\af9 List;}
-{\s18\sbasedon0\snext18\sb120\sa120\noline\i\dbch\af9\afs24\ai\fs24 Caption;}
-{\s19\sbasedon0\snext19\noline\dbch\af9 Index;}
-}{\*\generator LibreOffice/5.1.6.2$Linux_X86_64 LibreOffice_project/10m0$Build-2}{\info{\creatim\yr0\mo0\dy0\hr0\min0}{\revtim\yr2018\mo6\dy1\hr13\min13}{\printim\yr0\mo0\dy0\hr0\min0}}\deftab720
-\viewscale100
-{\*\pgdsctbl
-{\pgdsc0\pgdscuse451\pgwsxn12240\pghsxn15840\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\pgdscnxt0 Default Style;}}
-\formshade{\*\pgdscno0}\paperh15840\paperw12240\margl1440\margr1440\margt1440\margb1440\sectd\sbknone\sectunlocked1\pgndec\pgwsxn12240\pghsxn15840\marglsxn1440\margrsxn1440\margtsxn1440\margbsxn1440\ftnbj\ftnstart1\ftnrstcont\ftnnar\aenddoc\aftnrstcont\aftnstart1\aftnnrlc
-{\*\ftnsep}\pgndec\pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0\cf1\rtlch \ltrch\loch\fs24\loch\f5
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf400
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\sl254\slmult1\partightenfactor0
 
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-CREATE TABLE User (id INT PRIMARY KEY, name CHAR(20), email CHAR(30))}
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0\cf1\rtlch \ltrch\loch\fs24\loch\f5
+\f0\fs24 \cf0 CREATE TABLE User (id INT PRIMARY KEY, name CHAR(20), email CHAR(30))
+\f1 \
 
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-CREATE TABLE Trade (id INT, timestamp INT, price DOUBLE, userID INT,  bought?BOOL, }
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-\tab PRIMARY KEY(id, userID), }
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-\tab FOREIGN KEY (userID) }
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-\tab \tab REFERENCES User(id)}
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-\tab \tab ON DELETE CASCADE)}
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0\cf1\rtlch \ltrch\loch\fs24\loch\f5
+\f0 \
+CREATE TABLE Trade (id INT, timestamp INT, price DOUBLE, user_id INT,  bought?BOOL, 
+\f1 \
 
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-CREATE TABLE Exchange (name CHAR(}{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-20}{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-) PRIMARY KEY, website CHAR(30))}
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0\cf1\rtlch \ltrch\loch\fs24\loch\f5
+\f0 	PRIMARY KEY(id, user_id), 
+\f1 \
 
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-CREATE TABLE Traded_On(exchange_name CHAR(20), commodity_name CHAR(20), \tab PRIMARY KEY(exchange_name, commodity_name),}
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-\tab FOREIGN KEY (exchange_name) REFERENCES Exchange(name),}
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-\tab FOREIGN KEY (commodity_name) REFERENCES Commodity(name))}
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0\cf1\rtlch \ltrch\loch\fs24\loch\f5
+\f0 	FOREIGN KEY (user_id) 
+\f1 \
 
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-CREATE TABLE Metric (name CHAR(20), timestamp INT, tradedon_commodity \tab \tab \tab CHAR(}{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-20}{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-), tradedon_exchange CHAR(20),}
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-\tab PRIMARY KEY(name, }{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-tradedon_}{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-exchange) }
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-\tab FOREIGN KEY (tradedon_exchange, tradedon_commodity) }
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-\tab \tab REFERENCES Traded_On(exchange_name, commodity_name)}
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-\tab \tab ON DELETE CASCADE)}
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0\cf1\rtlch \ltrch\loch\fs24\loch\f5
+\f0 		REFERENCES User(id)
+\f1 \
 
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-CREATE TABLE Price (metric_name CHAR(20), buy DOUBLE, sell DOUBLE,}
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-\tab FOREIGN KEY (metric_name) REFERENCES Metric(name))}
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0\cf1\rtlch \ltrch\loch\fs22\loch\f6
+\f0 		ON DELETE CASCADE)\
+\
+CREATE TABLE Account (exchange_name CHAR(20), user_id INT, balance INT,\
+	PRIMARY KEY(exchange_name , user_id)\
+	FOREIGN KEY (exchange_name) REFERENCES Exchange(name)\
+	FOREGIN KEY(user_id) REFERENCES User(id))
+\f1 \
 
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-CREATE TABLE Volume (metric_name CHAR(20), daily INT, hourly INT,}
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-\tab FOREIGN KEY (metric_name) REFERENCES Metric(name))}
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0\cf1\rtlch \ltrch\loch\fs24\loch\f5
+\f0 \
+CREATE TABLE Exchange (name CHAR(20) PRIMARY KEY, website CHAR(30))
+\f1 \
 
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-CREATE TABLE Trend (metric_name CHAR(20), value INT, source CHAR(30),}
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-\tab FOREIGN KEY (metric_name) REFERENCES Metric(name))}
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0\rtlch \ltrch\loch
+\f0 \
+CREATE TABLE Traded_On(exchange_name CHAR(20), commodity_name CHAR(20), 	PRIMARY KEY(exchange_name, commodity_name),
+\f1 \
 
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-CREATE TABLE Commodity (name CHAR(20) PRIMARY KEY, metric_name \tab \tab \tab CHAR(20),}
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-\tab FOREIGN KEY (metric_name) REFERENCES Metric(name))}
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0\cf1\rtlch \ltrch\loch\fs24\loch\f5
+\f0 	FOREIGN KEY (exchange_name) REFERENCES Exchange(name),
+\f1 \
 
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-CREATE TABLE Coin (commodity_name CHAR(20) }{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-PRIMARY KEY}{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-, ICO_value DOUBLE,}
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-\tab FOREIGN KEY (commodity_name) REFERENCES Commodity(name))}
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0\cf1\rtlch \ltrch\loch\fs22\loch\f6
+\f0 	FOREIGN KEY (commodity_name) REFERENCES Commodity(name))
+\f1 \
 
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-CREATE TABLE Stock (commodity_name CHAR (20) }{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-PRIMARY KEY}{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-, company_site CHAR(30)}
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0{\cf1\rtlch \ltrch\loch\fs24\loch\f5
-\tab FOREIGN KEY (commodity_name) REFERENCES Commodity(name))}
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0\cf1\rtlch \ltrch\loch\fs22\loch\f6
+\f0 \
+CREATE TABLE Metric (id INT, name CHAR(20), timestamp INT, tradedon_commodity 			CHAR(20), tradedon_exchange CHAR(20),
+\f1 \
 
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl254\slmult1\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\li0\ri0\lin0\rin0\fi0\rtlch \ltrch\loch
+\f0 	PRIMARY KEY(name, tradedon_exchange, id) 
+\f1 \
 
-\par \pard\plain \s0\nowidctlpar\hyphpar0\cf0\kerning1\dbch\af7\langfe2052\dbch\af8\afs24\alang1081\loch\f3\fs24\lang4105\sl252\slmult1\ql\nowidctlpar\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\hyphpar0\faauto\li0\ri0\lin0\rin0\fi0\sb0\sa0\ltrpar\rtlch \ltrch\loch
+\f0 	FOREIGN KEY (tradedon_exchange, tradedon_commodity) 
+\f1 \
 
-\par }
+\f0 		REFERENCES Traded_On(exchange_name, commodity_name)
+\f1 \
+
+\f0 		ON DELETE CASCADE)
+\f1 \
+
+\f0 \
+CREATE TABLE Price (metric_id, INT PRIMARY KEY, metric_name CHAR(20), buy 		DOUBLE, sell DOUBLE, tradedon_commodity CHAR(20), tradedon_exchange
+\f1 \
+
+\f0 	FOREIGN KEY (metric_id) REFERENCES Metric(id))
+\f1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\sl254\slmult1\partightenfactor0
+
+\fs22 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\sl254\slmult1\partightenfactor0
+
+\f0\fs24 \cf0 CREATE TABLE Volume (metric_id INT PRIMARY KEY, daily INT, hourly INT,
+\f1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\sl254\slmult1\partightenfactor0
+
+\f0 \cf0 	FOREIGN KEY (metric_id) REFERENCES Metric(id))
+\f1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\sl254\slmult1\partightenfactor0
+
+\f0 \cf0 \
+CREATE TABLE Trend (metric_id INT, value INT, source CHAR(30),
+\f1 \
+
+\f0 	FOREIGN KEY (metric_id) REFERENCES Metric(id))
+\f1 \
+\
+
+\f0 CREATE TABLE Commodity (name CHAR(20) PRIMARY KEY)
+\f1 \
+
+\f0 \
+CREATE TABLE Coin (commodity_name CHAR(20) PRIMARY KEY, ICO_value DOUBLE,
+\f1 \
+
+\f0 	FOREIGN KEY (commodity_name) REFERENCES Commodity(name))
+\f1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\sl254\slmult1\partightenfactor0
+
+\fs22 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\sl254\slmult1\partightenfactor0
+
+\f0\fs24 \cf0 CREATE TABLE Stock (commodity_name CHAR (20) PRIMARY KEY, company_site CHAR(30)
+\f1 \
+
+\f0 	FOREIGN KEY (commodity_name) REFERENCES Commodity(name))
+\f1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\sl254\slmult1\partightenfactor0
+
+\fs22 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\sl254\slmult1\partightenfactor0
+
+\fs24 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab720\ri0\sl252\slmult1\partightenfactor0
+\cf0 \
+}
