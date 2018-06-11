@@ -3,3 +3,4 @@ CREATE TABLE Agent(
         name CHAR(20),
         email CHAR(30)
 );
+
