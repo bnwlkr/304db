@@ -20,7 +20,7 @@ class SQLBrain  {
         if ($exchange_name != null) {
             return $this->do_query("select commodity_name from Traded_On where exchange_name='$exchange_name'");
         } else if ($min_price != null) {
-            return $this->do_query("");
+            return $this->do_query("select );
         }
     }
     

@@ -9,9 +9,7 @@ $max_price = $_GET['max_price'];
 $min_price = $_GET['min_price'];
 $exchange_name = $_GET['exchange_name'];
 
-
 $result = sqlBrain.get_commodities($search, $min_price, $max_price, $exchange_name);
-
 
 echo json_encode($result);
 
