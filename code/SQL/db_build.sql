@@ -1,29 +1,13 @@
 --SCHEMA
 
-CREATE TABLE Agent(
-id INT PRIMARY KEY,
-name CHAR(20),
-email CHAR(30)
-);
+CREATE TABLE Agent(id INT PRIMARY KEY,name CHAR(20),email CHAR(30));
 
-CREATE TABLE Exchange(
-name CHAR(20) PRIMARY KEY, website CHAR(20)
-);
+CREATE TABLE Exchange(name CHAR(20) PRIMARY KEY, website CHAR(20));
 
-CREATE TABLE Commodity(
+CREATE TABLE Commodity(name CHAR(20) PRIMARY KEY);
 
-);
 
-CREATE TABLE Coin(
-name CHAR(20) PRIMARY KEY,
-);
-
-CREATE TABLE Stock(
-name CHAR(20) PRIMARY KEY,
-);
-
-CREATE TABLE Traded_On(
-commodity_name CHAR(20),
+CREATE TABLE Traded_On(commodity_name CHAR(20),
 exchange_name CHAR(20),
 PRIMARY KEY (commodity_name, exchange_name),
 FOREIGN KEY (commodity_name) REFERENCES Commodity(name),
