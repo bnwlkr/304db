@@ -32,19 +32,19 @@ class SQLBrain  {
         } else { if ($min_price != null && $max_price == null) {
             $it = $this->do_query ("select metric_id from Price where buy >= $min_price");
           for ($x =0; $x < sizeof($it); $x++){
-              $it[x] = $this->do_query ("select commodity_name from Metric where metric_id = $it");}
+              $it[x] = $this->do_query ("select commodity_name from Metric where metric_id = '$it'");}
               return $it;
 
         } else { if ($min_price == null && $max_price != null) {
            $it = $this->do_query ("select * from Price where buy <= $max_price");
            for ($x =0; $x < sizeof($it); $x++){
-               $it[x] = $this->do_query ("select commodity_name from Metric where metric_id = $it");}
+               $it[x] = $this->do_query ("select commodity_name from Metric where metric_id = '$it'");}
               return $it;
 
         } else { if ($min_price != null && $max_price != null) {
-            $it = $this->do_query ("select * from Price where buy > $min_price and buy < $min_price");
+            $it = $this->do_query ("select * from Price where ask > '$min_price' and ask < '$min_price'");
             for ($x =0; $x < sizeof($it); $x++){
-            $it[x] = $this->do_query ("select commodity_name from Metric where metric_id = $it");}
+            $it[x] = $this->do_query ("select commodity_name from Metric where metric_id = '$it'");}
             return $it;
 
 } else {
@@ -60,8 +60,11 @@ class SQLBrain  {
     
     function do_query ($query) {
         $result = $this->connection->query($query);
-        var_dump($result->fetch_assoc());
-        //TODO return an associatave array result
+        $ret = array();
+        while($row = $result->fetch_assoc()) {
+            array_push($ret, $row);
+        }
+        return $ret;
     }
     
     
