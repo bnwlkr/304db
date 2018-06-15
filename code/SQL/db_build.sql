@@ -29,19 +29,3 @@ sell INT,
 FOREIGN KEY (metric_id) REFERENCES Metric(id)
     ON DELETE CASCADE
 );
-
-
---TRIGGERS
-
-/* not working, but important for the ISA hierarchy. Will figure out.
-CREATE TRIGGER Commodity.Create
-BEFORE INSERT OR UPDATE OF commodity_name ON Coin
-INSERT into Commodity values (commodity_name);
-*/
-
-
---DUMMY-DATA
-/*
-insert into metric values (1, 'Bitcoin', 'QuadrigaCX');
-*/
-
