@@ -24,30 +24,30 @@ class SQLBrain  {
      * @param $price_bounds - an associative array containg ['min'] and ['max'] price to search for
      * @param $exchange_name - specifies that the search is for commodities on a particular exchange
      */
-    
+
     function get_commodities($search, $min_price, $max_price, $exchange_name) {
         if ($exchange_name != null) {
             return $this->do_query("select commodity_name from Traded_On where exchange_name='$exchange_name'");
 
         } else { if ($min_price != null && $max_price == null) {
-            $it = $this->do_query ("select metric_id from Price where buy >= $min_price");
+            $it = array($this->do_query ("select metric_id from Price where buy >= $min_price"));
           for ($x =0; $x < sizeof($it); $x++){
               $it[x] = $this->do_query ("select commodity_name from Metric where metric_id = $it");}
               return $it;
 
         } else { if ($min_price == null && $max_price != null) {
-           $it = $this->do_query ("select * from Price where buy <= $max_price");
+           $it = array($this->do_query ("select * from Price where buy <= $max_price"));
            for ($x =0; $x < sizeof($it); $x++){
                $it[x] = $this->do_query ("select commodity_name from Metric where metric_id = $it");}
               return $it;
 
         } else { if ($min_price != null && $max_price != null) {
-            $it = $this->do_query ("select * from Price where buy > $min_price and buy < $min_price");
+            $it = array($this->do_query ("select * from Price where buy > $min_price and buy < $min_price"));
             for ($x =0; $x < sizeof($it); $x++){
             $it[x] = $this->do_query ("select commodity_name from Metric where metric_id = $it");}
             return $it;
 
-} else {
+        } else {
             return $this->do_query("select name from Commodity");
         }
     }
