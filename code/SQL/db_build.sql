@@ -6,18 +6,13 @@ name CHAR(20),
 email CHAR(30)
 );
 
-CREATE TABLE Traded_On(
-commodity_name CHAR(20),
-exchange_name CHAR(20),
-PRIMARY KEY (commodity_name, exchange_name),
-FOREIGN KEY (commodity_name) REFERENCES Commodity(name),
-FOREIGN KEY (exchange_name) REFERENCES Exchange(name)
-);
-
 CREATE TABLE Exchange(
 name CHAR(20) PRIMARY KEY, website CHAR(20)
 );
 
+CREATE TABLE Commodity(
+
+);
 
 CREATE TABLE Coin(
 name CHAR(20) PRIMARY KEY,
@@ -25,6 +20,14 @@ name CHAR(20) PRIMARY KEY,
 
 CREATE TABLE Stock(
 name CHAR(20) PRIMARY KEY,
+);
+
+CREATE TABLE Traded_On(
+commodity_name CHAR(20),
+exchange_name CHAR(20),
+PRIMARY KEY (commodity_name, exchange_name),
+FOREIGN KEY (commodity_name) REFERENCES Commodity(name),
+FOREIGN KEY (exchange_name) REFERENCES Exchange(name)
 );
 
 
