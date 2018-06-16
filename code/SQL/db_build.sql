@@ -36,13 +36,15 @@ CREATE TABLE Trade (
 timestamp TIMESTAMP PRIMARY KEY ON UPDATE CURRENT_TIMESTAMP,
 user_id INT,
 exchange_name CHAR(20),
-commodity_name CHAR(20),
-value DOUBLE,
-bought BOOL,
+from_commodity_name CHAR(20),
+to_commodity_name CHAR(20),
+from_value DOUBLE,
+to_value DOUBLE,
 FOREIGN KEY (user_id) REFERENCES User(id)
     ON DELETE CASCADE,
 FOREIGN KEY (exchange_name) REFERENCES Exchange(name),
-FOREIGN KEY (commodity_name) REFERENCES Commodity(name)
+FOREIGN KEY (to_commodity_name) REFERENCES Commodity(name),
+FOREIGN KEY (from_commodity_name) REFERENCES Commodity(name)
 );
 
 
