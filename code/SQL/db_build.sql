@@ -24,6 +24,14 @@ FOREIGN KEY (user_id) REFERENCES User(id),
 FOREIGN KEY (exchange_name) REFERENCES Exchange(name)
 );
 
+CREATE TABLE Trade (
+timestamp INT PRIMARY KEY,
+user_id INT,
+value DOUBLE,
+bought BOOL,
+FOREIGN KEY (user_id) REFERENCES User(id)
+);
+
 
 CREATE TABLE Metric(
 id INT PRIMARY KEY,
