@@ -1,6 +1,11 @@
 --SCHEMA
 
-CREATE TABLE User(id INT PRIMARY KEY,name CHAR(20),email CHAR(20));
+CREATE TABLE User(
+id INT PRIMARY KEY AUTO_INCREMENT,
+name CHAR(20),
+email CHAR(20),
+password BINARY(64)
+);
 
 CREATE TABLE Exchange(name CHAR(20) PRIMARY KEY, website CHAR(20));
 
