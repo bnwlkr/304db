@@ -10,18 +10,16 @@ class SQLBrain
     private $connection;
 
 
-    /*
-    * connects the brain to the database.
-    */
-    function start()
+    function __construct()
     {
         $this->connection = new mysqli('localhost', 'btfd_u', 'comex', 'btfd_db');
         if ($this->connection->connect_error) {
             die('Connect Error (' . $this->connection->connect_errno . ') '
                 . $this->connection->connect_error);
         }
-    }
 
+    }
+    
     /*
      * executes the given query and returns an array of resulting tuples
      *

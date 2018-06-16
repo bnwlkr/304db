@@ -14,7 +14,6 @@ $max_price = $_GET['max_price'];
 $exchange_name = $_GET['exchange_name'];
 
 $sqlBrain = new SQLBrain();
-
 $sqlBrain->start();
 
 if ($exchange_name != null) {  // list all the commodities on a partuclar exchange
