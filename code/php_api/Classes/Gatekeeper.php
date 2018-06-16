@@ -17,19 +17,19 @@ class Gatekeeper
     }
 
 
-    function check_credentials($username, $password) {
-
-
+    function check_credentials($email, $password) {
+        $result = $this->sqlBrain->do_query("select User.id, User.name, User.email from User 
+                                                          where SHA1('$password') = User.password and User.email = '$email'");
+        if (empty($result)) {
+            return false;
+        } else {
+            return $result;
+        }
     }
 
     function create_account ($name, $email, $password) {
-        $this->sqlBrain->do_query("insert into User(name, email, password) values ('$name', '$email', SHA1('$password'))");
+        return $this->sqlBrain->do_query("insert into User(name, email, password) values ('$name', '$email', SHA1('$password'))");
     }
-
-
-
-
-
 
 
 }

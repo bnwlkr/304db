@@ -17,7 +17,6 @@ class SQLBrain
             die('Connect Error (' . $this->connection->connect_errno . ') '
                 . $this->connection->connect_error);
         }
-
     }
 
     /*
@@ -29,6 +28,8 @@ class SQLBrain
     {
         $result = $this->connection->query($query);
         $ret = array();
+        if ($result==false) {return false;}
+        if ($result==true && !is_object($result)) {return true;}
         while ($row = $result->fetch_assoc()) {
             array_push($ret, $row);
         }

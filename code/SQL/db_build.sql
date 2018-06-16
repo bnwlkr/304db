@@ -3,7 +3,7 @@
 CREATE TABLE User(
 id INT PRIMARY KEY AUTO_INCREMENT,
 name CHAR(20),
-email CHAR(20),
+email CHAR(20) UNIQUE,
 password BINARY(64)
 );
 
@@ -33,7 +33,7 @@ FOREIGN KEY (commodity_name) REFERENCES Commodity(name)
 );
 
 CREATE TABLE Trade (
-timestamp INT PRIMARY KEY,
+timestamp TIMESTAMP PRIMARY KEY ON UPDATE CURRENT_TIMESTAMP,
 user_id INT,
 exchange_name CHAR(20),
 commodity_name CHAR(20),
