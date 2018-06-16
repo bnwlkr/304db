@@ -9,17 +9,17 @@ spl_autoload_register(function ($class_name) {
 
 $name = $_GET['name'];
 $website = $_GET['website'];
-$sql = array();
 
 
-// CALL SQL
+
+
 $sqlbrain = new SQLBrain();
-$sqlbrain->start();
+
 if ($name != null && $website == null) {
-$sql = $sqlbrain->do_query("select name from Exchange where name = $name");
+$sql = $sqlbrain->do_query("select * from Exchange where name = $name");
 } else {
     if ($name == null && $website != null) {
-        $sql = $sqlbrain->do_query("select website from Exchange where website = $website");
+        $sql = $sqlbrain->do_query("select * from Exchange where website = $website");
     } else {
         $sql = $sqlbrain->do_query("select name from Exchange");
     }
