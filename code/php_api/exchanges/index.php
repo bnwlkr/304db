@@ -10,9 +10,6 @@ spl_autoload_register(function ($class_name) {
 $name = $_GET['name'];
 $website = $_GET['website'];
 
-
-
-
 $sqlbrain = new SQLBrain();
 
 if ($name != null && $website == null) {
