@@ -10,14 +10,19 @@ spl_autoload_register(function ($class_name) {
 
 $user_id = $_GET['user_id'];
 $exchange_name = $_GET['exchange_name'];
+$commodity_name = $_GET['commodity_name'];
 
 $sqlBrain = new SQLBrain();
 
 if ($exchange_name!=null) {
-    $ret = $sqlBrain->do_query("select Account.exchange_name, Account.value from Account join User On Account.user_id = User.id 
+    $ret = $sqlBrain->do_query("select Account.exchange_name, Account.commodity_name, Account.value from Account join User On Account.user_id = User.id 
                                           where User.id = $user_id and exchange_name='$exchange_name'");
+} else if ($commodity_name!=null) {
+    $ret = $sqlBrain->do_query("select Account.exchange_name, Account.commodity_name, Account.value from Account left join User On Account.user_id=User.id 
+                                                where Account.commodity_name='$commodity_name'");
+
 } else {
-    $ret = $sqlBrain->do_query("select Account.exchange_name, Account.value from Account join User On Account.user_id = User.id 
+    $ret = $sqlBrain->do_query("select Account.exchange_name, Account.commodity_name, Account.value from Account join User On Account.user_id = User.id 
                                           where User.id = $user_id");
 }
 
