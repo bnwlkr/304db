@@ -18,10 +18,13 @@ FOREIGN KEY (exchange_name) REFERENCES Exchange(name)
 CREATE TABLE Account(
 user_id INT,
 exchange_name CHAR(20),
+commodity_name CHAR(20),
 value DOUBLE,
 PRIMARY KEY (user_id, exchange_name),
-FOREIGN KEY (user_id) REFERENCES User(id),
-FOREIGN KEY (exchange_name) REFERENCES Exchange(name)
+FOREIGN KEY (user_id) REFERENCES User(id)
+    ON DELETE CASCADE,
+FOREIGN KEY (exchange_name) REFERENCES Exchange(name),
+FOREIGN KEY (commodity_name) REFERENCES Commodity(name)
 );
 
 CREATE TABLE Trade (
