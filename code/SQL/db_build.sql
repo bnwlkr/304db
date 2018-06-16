@@ -29,6 +29,9 @@ CREATE TABLE Metric(
 id INT PRIMARY KEY,
 commodity_name CHAR(20),
 exchange_name CHAR(20),
+bid INT,
+ask INT,
+volume INT,
 FOREIGN KEY (commodity_name, exchange_name) REFERENCES Traded_On (commodity_name, exchange_name)
     ON DELETE CASCADE
 );
