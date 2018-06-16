@@ -19,7 +19,7 @@ class SQLBrain
         }
 
     }
-    
+
     /*
      * executes the given query and returns an array of resulting tuples
      *
