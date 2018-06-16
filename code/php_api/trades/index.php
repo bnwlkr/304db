@@ -7,27 +7,24 @@ error_reporting(E_ALL);
 spl_autoload_register(function ($class_name) {
     include '../Classes/'. $class_name . '.php';});
 
-$user_id = $_GET['id'];
-$timestamp = $_GET['timestamp'];
-$value = $_GET['price'];
-$bought = $_GET['bought'];
-$exchange = $_GET['exchange'];
-$commodity = $_GET['commodity'];
 
+$exchange_name = $_GET['exchange_name'];
+$day = $_GET['day'];
+
+//Turn day into seconds.
+$day = $day * 86400;
 
 // CALL SQL
 $sqlbrain = new SQLBrain();
 
 
-if ($commodity != null) {
-    $sql = $sqlbrain->do_query("select * from Trade where commodity = $commodity");
-} else {
+if ($day != null) {
+    $sql = $sqlbrain->do_query("select * from Trade where timestamp > timestamp - '$day'");
+} else
     if ($exchange != null) {
-        $sql = $sqlbrain->do_query("select * from Trade where exchange = $exchange");}
-        else {
+        $sql = $sqlbrain->do_query("select * from Trade where exchange = '$exchange'");}
+  else
+        $sql = $sqlbrain->do_query("select * from Trade");
 
-        $sql = $sqlbrain->do_query("select * from Exchange");
-    }
-}
-
+echo json_encode($sql);
 ?>
