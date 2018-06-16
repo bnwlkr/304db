@@ -25,7 +25,7 @@ user_id INT,
 exchange_name CHAR(20),
 commodity_name CHAR(20),
 value DOUBLE,
-PRIMARY KEY (user_id, exchange_name),
+PRIMARY KEY (user_id, exchange_name, commodity_name),
 FOREIGN KEY (user_id) REFERENCES User(id)
     ON DELETE CASCADE,
 FOREIGN KEY (exchange_name) REFERENCES Exchange(name),
