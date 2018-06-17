@@ -29,7 +29,6 @@ if ($create) {
 
 $sqlBrain = new SQLBrain();
 
-
 if ($total) {
     $ret = $sqlBrain->do_query("select  Account.commodity_name, sum(Account.value) from Account join User On Account.user_id = User.id 
                                           where User.id = $user_id group by Account.commodity_name");

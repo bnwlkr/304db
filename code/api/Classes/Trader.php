@@ -27,6 +27,9 @@ class Trader
         $give = $this->sqlBrain->do_query("update Account
                                               set value = value + $quantity
                                               where user_id=$user_id and commodity_name='$commodity_name' and exchange_name='$exchange_name'");
+        if ($take && $give) {
+            $this->create_record($user_id, $commodity_name, $exchange_name, $ask, $quantity, 'buy');
+        }
         return $take && $give;
     }
 
@@ -41,6 +44,9 @@ class Trader
         $give = $this->sqlBrain->do_query("update Account
                                               set value = value + $total 
                                               where user_id=$user_id and commodity_name='cad' and exchange_name='$exchange_name'");
+        if ($take && $give) {
+            $this->create_record($user_id, $commodity_name, $exchange_name, $bid, $quantity, 'sell');
+        }
         return $take && $give;
     }
 
@@ -64,6 +70,11 @@ class Trader
     function has_account($user_id, $exchange_name) {
         $result = $this->sqlBrain->do_query("select * from Account where exchange_name='$exchange_name' and user_id=$user_id");
         return !empty($result);
+    }
+
+    function create_record ($user_id, $commodity_name, $exchange_name, $price, $quantity, $move) {
+        $this->sqlBrain->do_query("insert into Trade (user_id, exchange_name, commodity_name, price, quantity, move) values 
+                                            ($user_id, '$exchange_name', '$commodity_name', $price, $quantity, '$move')");
     }
 
 
