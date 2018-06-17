@@ -2,7 +2,7 @@
 	<html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>No Suggestion Exact</title>
+		<title>PINK EXCHANGE</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="../Static/css/bootstrap.min.css" rel="stylesheet">
 		<link href="../Static/css/bootstrap-grid.min.css" rel="stylesheet">
@@ -13,54 +13,63 @@
 		<link href="../Static/css/custom.css" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-			
+
 	</head>
 	<body>
 		<div id="big" class="container" align="center">
 		<p class="text-center" id="header">Buy and Sell Stocks and CryptoCoins</p>
 		<h1 class="text-center">PINK EXCHANGE</h1>
 		<spacer></spacer>
-		
+
 			<!-- Submit bar -->
-			
+
 				<div class=".float-center">
 					<div class="col-lg-6 col-lg-offset-3">
 					<form method="POST">
 						<div class="input-group">
 						<input type="text" class="form-control" placeholder="Insert the commodity you are looking for...">
 						<span class="input-group-btn">
-							<input class="btn btn-default" type="button" value="Submit" onclick="return CCID_input()">
+							<input class="btn btn-default" type="button" value="Search" onclick="return C_input()">
 						</span>
 						</div>
 						</form>
 					</div>
 				</div>
-				
 
-        <div class="container" align="center">
-		<div class="row">
-					
-						
-							<div class="col">
-								<span class="input-group-btn">
-									<button class="btn btn-default" type="button">Buy</button>
-								</span>
-								
-							</div>
-							<div class="col">
-								<span class="input-group-btn">
-									<button class="btn btn-default" type="button">Sell</button>
-								</span>
-								
-							</div>
-							
-						</div>
-					
+
+<div class="container" align="center">
+				  <div class="row">
+				    <div class="col-sm">
+
+				    </div>
+						<div class="col-sm">
+							<span class="input-group-btn">
+								<input class="btn btn-default" type="button" value="My Account" onclick="return myAcount()">
+							</span>
+				    </div>
+
+				    <div class="col-sm">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="button" onclick="return buying() ">Buy Commodity</button>
+							</span>
+				    </div>
+
+				    <div class="col-sm">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="button" onclick="return selling()">Sell Commodity</button>
+							</span>
+				    </div>
+						<div class="col-sm">
+							<span class="input-group-btn">
+								<button class="btn btn-default" type="button" onclick="return allCommodity()">All Commodity </button>
+							</span>
+				    </div>
+						<div class="col-sm">
+
+				    </div>
+				  </div>
 				</div>
 		</div>
-		
-
-		
 		<!--  Footer -->
 		<div class="footer">
 				<div class="row content">
@@ -79,11 +88,18 @@
 		<script src="../Static/js/bootstrap.min.js"></script>
 		<script src="../Static/js/jquery-3.2.1.min.js"></script>
 		<script script language="javascript" type="text/javascript">
-			function CCID_input()
+
+			function C_input()
 			{
-				 window.location.href = "SecondPage.html";
+				 window.location.href = "searchResult.html";
 			}
-		</script	
+			function myAcount()
+			{
+				wondow.location.href ="myAccount.html";
+			}
+			
+
+		</script>
 	</body>
 
 	</html>
