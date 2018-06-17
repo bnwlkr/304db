@@ -28,8 +28,8 @@ class SQLBrain
     {
         $result = $this->connection->query($query);
         $ret = array();
-        if ($result==false) {return false;}
-        if ($result==true && !is_object($result)) {return true;}
+        if ($result===false) {return false;}
+        if ($result===true) {return true;}
         while ($row = $result->fetch_assoc()) {
             array_push($ret, $row);
         }
