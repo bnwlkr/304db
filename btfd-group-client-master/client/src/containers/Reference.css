@@ -1,0 +1,19 @@
+@media all and (min-width: 480px) {
+
+    #content .method .method-area:first-child .method-copy {
+        padding-top: 0px;
+    }
+
+    #content .first-method-copy-padding {
+        padding-top: 30px;
+    }
+
+    #content .method .method-copy {
+        font-size: 14px;
+        font-family: "Open Sans";
+        line-height: 26px;
+    }
+
+
+}
+

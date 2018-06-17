@@ -1,0 +1,145 @@
+
+	.p#insideText{
+		padding: 0px;
+		font-size: 12px;
+		color:#009688;
+	}
+	.p#regular{
+		padding: 0px;
+		font-size: 12px;
+		color:black;
+	}
+	.p#header{
+		color: white;
+		font-size: 25px;
+		font:'Open Sans', sans-serif;
+		font-weight:bold;
+	}
+	.p#footer{
+		color: white;
+		font-size: 12px;
+		font:'Open Sans', sans-serif;
+		font-weight:bold;
+	}
+.input-group-btn#btns {
+ margin-top: 10px;
+
+
+}
+	.article {
+		background: #f2f2f2;
+		padding-bottom: 30px;
+		padding-top: 30px;
+	}
+	.col-md-12{
+			display: inline-block;
+	}
+	.span {
+		margin: auto;
+	}
+	.panel-transparent{
+		background: transparent;
+	}
+	.h1#home{
+		color: white;
+		font-size: 170px;
+		font:'Open Sans', sans-serif;
+		font-weight:bold;
+	}
+	.h3{
+		color: white;
+	}
+	.h4{
+		color: rgba(5, 46, 50, 0.85);
+		font-size: 12px;
+	}
+	.h5{
+		color: white;
+	}
+	.spacer {
+		margin:0;
+		padding:0;
+		height:20px;
+	}
+	.html, body {
+		height:100%;
+		margin:0;
+		padding:0;
+		background-color: #ed5e9e;
+		background-repeat:no-repeat;
+		background-size: cover;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		overflow-x: hidden;
+		color: rgb(247, 255, 250);
+		font-variant: normal normal;
+	}
+
+	.container {
+		margin-top: 100px;
+		position:absolute;
+		top:30%;
+		left:12%;
+		max-width:80%;
+	}
+
+	.padded{
+		padding-top:120px;
+		padding-left:18%;
+
+	}
+	.btn-default {
+		color: rgba(5, 46,150, 0.85)!important;
+	}
+	.input-group{
+		-webkit-box-shadow: 0 8px 6px -6px rgb(0, 0, 0);
+		-moz-box-shadow: 0 8px 6px -6px rgb(0, 0, 0);
+		box-shadow: 0 8px 6px -6px rgb(0, 0, 0);
+	}
+	.hr {
+		-moz-border-bottom-colors: none;
+		-moz-border-image: none;
+		-moz-border-left-colors: none;
+		-moz-border-right-colors: none;
+		-moz-border-top-colors: none;
+		border-color: #EEEEEE -moz-use-text-color #FFFFFF;
+		border-style: solid none;
+		border-width: 1px 0;
+		margin: 18px 0;
+	}
+	.btn-danger {
+		color: #043d3e;
+		background-color: #f8f9fa;
+		border-color: #043d3e;
+		padding: 7px 10px;
+		font-size: 12px;
+		border-radius: 2px;
+	}
+	.btn-group-lg>.btn, .btn-lg {
+		padding: .08rem 0.2rem;
+		font-size: 1.00rem;
+		line-height: 1.2;
+		border-radius: .2rem;
+		margin-left: 8px;
+	}
+	.ul{
+		color: rgb(232, 253, 253);
+		margin: 20px 0;
+	}
+	.li{
+		margin: 1px 0;
+	}
+
+	.modal-header, h4, .close {
+	   background-color: rgba(5, 46, 50, 0.85);
+	   color:white !important;
+	   text-align: center;
+	   font-size: 30px;
+	}
+	.modal-footer {
+		background-color: #750437;
+	}
+	.btn btn-success btn-block{
+		color: rgba(5, 46, 50, 0.85);
+	}
