@@ -15,6 +15,7 @@ CREATE TABLE Commodity(name CHAR(20) PRIMARY KEY);
 CREATE TABLE Traded_On(
 commodity_name CHAR(20),
 exchange_name CHAR(20),
+fees DOUBLE,
 PRIMARY KEY (commodity_name, exchange_name),
 FOREIGN KEY (commodity_name) REFERENCES Commodity(name),
 FOREIGN KEY (exchange_name) REFERENCES Exchange(name)
@@ -59,9 +60,6 @@ FOREIGN KEY (commodity_name, exchange_name) REFERENCES Traded_On (commodity_name
     ON DELETE CASCADE
 );
 
-CREATE TABLE Price (metric_id INT PRIMARY KEY,
-buy INT,
-sell INT,
-FOREIGN KEY (metric_id) REFERENCES Metric(id)
-    ON DELETE CASCADE
-);
+
+--TRIGGERS
+
