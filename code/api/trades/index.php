@@ -18,13 +18,13 @@ $day = $day * 86400;
 $sqlbrain = new SQLBrain();
 
 
-if ($day != null) {
+if ($day) {
     $sql = $sqlbrain->do_query("select * from Trade where timestamp > timestamp - '$day'");
-} else
-    if ($exchange != null) {
-        $sql = $sqlbrain->do_query("select * from Trade where exchange = '$exchange'");}
-  else
-        $sql = $sqlbrain->do_query("select * from Trade");
+} else if ($exchange_name) {
+    $sql = $sqlbrain->do_query("select * from Trade where exchange_name = '$exchange_name'");
+} else {
+    $sql = $sqlbrain->do_query("select * from Trade");
+}
 
 echo json_encode($sql);
 ?>

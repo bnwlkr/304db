@@ -26,13 +26,13 @@ $query11 = "select Metric.* from Metric join (select Commodity.name, Traded_On.e
                   where Metric.commodity_name='$commodity_name'";
 
 
-if ($exchange_name != null && $commodity_name == null) {  // list all the commodities on a particular exchange
+if ($exchange_name && !$commodity_name) {  // list all the commodities on a particular exchange
     $ret = $sqlBrain->do_query($query10);
-} else if ($exchange_name == null && $commodity_name != null) {
+} else if (!$exchange_name && $commodity_name) {
     $ret = $sqlBrain->do_query($query01);
-} else if ($exchange_name != null && $commodity_name != null) {
+} else if ($exchange_name && $commodity_name) {
     $ret = $sqlBrain->do_query($query11);
-} else if ($min_price != null && $max_price != null) {
+} else if ($min_price && $max_price) {
         $ret = $sqlBrain->do_query("select Metric.* from Metric join Commodity on Metric.commodity_name = Commodity.name 
                                               where Metric.ask BETWEEN $min_price and $max_price");
 }

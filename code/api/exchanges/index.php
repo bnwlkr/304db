@@ -11,7 +11,7 @@ $name = $_GET['name'];
 
 $sqlbrain = new SQLBrain();
 
-if ($name != null) {
+if ($name) {
     $sql = $sqlbrain->do_query("select * from Exchange where name = '$name'");
 } else {
     $sql = $sqlbrain->do_query("select * from Exchange");
