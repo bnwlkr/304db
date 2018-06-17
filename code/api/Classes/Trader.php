@@ -12,17 +12,21 @@ class Trader
     private $sqlBrain;
 
 
-    function __construct()
-    {
+    function __construct() {
         $this->sqlBrain = new SQLBrain();
     }
 
-
-    function execute_trade ($from_commodity_name, $to_commodity_name, $to_quantity, $user_id, $exchange) {
-        // first calculate the rate to_commodity/from_commodity
-
-
+    function execute_trade ($user_id, $commodity_name, $exchange_name, $quantity) {
+        $user_balance = $this->get_balance($exchange_name, $user_id);
     }
+
+    function get_balance ($exchange_name, $user_id) {
+        $result = $this->sqlBrain->do_query("select Account.value from Account where commodity_name='cad' and user_id=1 and exchange_name='QuadrigaCX'");
+        return $result;
+    }
+
+
+
 
 
 

@@ -31,6 +31,7 @@ FOREIGN KEY (user_id) REFERENCES User(id)
     ON DELETE CASCADE,
 FOREIGN KEY (exchange_name) REFERENCES Exchange(name),
 FOREIGN KEY (commodity_name) REFERENCES Commodity(name)
+CONSTRAINT balance_check CHECK (NOT value<0)
 );
 
 CREATE TABLE Trade (
