@@ -12,10 +12,10 @@ $name = $_GET['name'];
 $sqlbrain = new SQLBrain();
 
 if ($name != null) {
-$sql = $sqlbrain->do_query("select * from Exchange where name = '$name'");
-} else
-        $sql = $sqlbrain->do_query("select * from Exchange");
-
+    $sql = $sqlbrain->do_query("select * from Exchange where name = '$name'");
+} else {
+    $sql = $sqlbrain->do_query("select * from Exchange");
+}
 
 echo json_encode($sql);
 

@@ -12,10 +12,16 @@ $user_id = $_GET['user_id'];
 $exchange_name = $_GET['exchange_name'];
 $commodity_name = $_GET['commodity_name'];
 $total = $_GET['total'];
+$create = $_GET['create'];
+
+if ($create) {
+    $gateKeeper = new Gatekeeper();
+    exit($gateKeeper->create_exchange_account($user_id, $exchange_name));
+}
 
 $sqlBrain = new SQLBrain();
 
-if ($total == true){
+if ($total) {
     $ret = $sqlBrain->do_query("select  Account.commodity_name, sum(Account.value) from Account join User On Account.user_id = User.id 
                                           where User.id = $user_id group by Account.commodity_name" );
 } else if ($exchange_name!=null) {

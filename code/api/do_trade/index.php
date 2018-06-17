@@ -15,6 +15,11 @@ $quantity = $_GET['quantity'];
 
 $trader = new Trader();
 
+if (!$trader->has_account($user_id, $exchange_name)) {
+    exit(json_encode("no account"));
+}
+
+
 if ($move=='buy') {
     echo json_encode($trader->buy($user_id, $commodity_name, $exchange_name, $quantity));
 } else if ($move=='sell') {

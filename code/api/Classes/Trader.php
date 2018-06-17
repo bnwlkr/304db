@@ -61,6 +61,12 @@ class Trader
         return (double)$result[0]['bid'];
     }
 
+    function has_account($user_id, $exchange_name) {
+        $result = $this->sqlBrain->do_query("select * from Account where exchange_name='$exchange_name' and user_id=$user_id");
+        return !empty($result);
+    }
+
+
 
 
 

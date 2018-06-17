@@ -16,7 +16,6 @@ class Gatekeeper
         $this->sqlBrain = new SQLBrain();
     }
 
-
     function check_credentials($email, $password) {
         $result = $this->sqlBrain->do_query("select User.id, User.name, User.email from User 
                                                           where SHA1('$password') = User.password and User.email = '$email'");
@@ -29,6 +28,11 @@ class Gatekeeper
 
     function create_account ($name, $email, $password) {
         return $this->sqlBrain->do_query("insert into User(name, email, password) values ('$name', '$email', SHA1('$password'))");
+    }
+
+    function create_exchange_account($user_id, $exchange_name) {
+        return $this->sqlBrain->do_query("insert into Account (user_id, commodity_name, exchange_name) select $user_id, Commodity.name as commodity_name, Traded_On.exchange_name from 
+                                            Commodity join Traded_On On Traded_On.commodity_name = Commodity.name where Traded_On.exchange_name='$exchange_name'");
     }
 
 
