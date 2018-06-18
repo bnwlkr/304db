@@ -28,10 +28,12 @@
 </div>
 <div class = "query-input">
     <h4 class="pl-5 pt-3">Selection and Projection Queries</h4>
-    <h4 class="pl-5"><small>Gets all of the commodities traded on a particular exchange</small></h4>
+    <h4 class="pl-5"><small>Get all of the commodities traded on a particular exchange.</small></h4>
     <div class = "row align-items-center justify-content-center">
+
         <div class="input-group mb-3 w-25 p-4">
-            <select class="custom-select" id="name" name="name" value="selectedOption">
+            <form action="/display.php" method="get">
+            <select class="custom-select" id="exchange1" name="name" value="submit">
                 <option selected>Select an exchange...</option>
                 <option value="1">CoinSquare</option>
                 <option value="2">Euronext</option>
@@ -45,14 +47,15 @@
             <!--<form action = "/exchanges" method = "get">
                 <input type="submit" name="name" value="selectedOption" />
             </form>-->
+            </form>
             <div class="input-group-append">
                 <button class="btn btn-outline-secondary" type="button" formmethod="post" action="/exchanges">Run</button>
             </div>
         </div>
     </div>
-    <h4 class="pl-5"><small>Shows all of the commodities and where they are traded including bid and ask price.</small></h4>
-    <div class = "row align-items-center justify-content-center pt-4 pl-4">
-        <div class="input-group mb-3 w-25 pb-4">
+    <h4 class="pl-5"><small>Get all of the commodities and the exchange on which they were traded, including bid and ask price.</small></h4>
+    <div class = "row align-items-center justify-content-center pt-4">
+        <div class="input-group mb-3 w-25 pb-4 pl-4 pr-4">
             <select class="custom-select" id="exchange">
                 <option selected>Select an exchange...</option>
                 <option value="1">CoinSquare</option>
@@ -89,22 +92,23 @@
         </div>
     </div>
     <h4 class="pl-5"><small><strong>BONUS:</strong> Shows all of the commodities between a min and a max price. </small></h4>
-    <div class = "row align-items-center justify-content-center pt-4">
-        <div class="form-group method mb-3 w-25">
+    <form action="display.php" method="get">
+    <div class = "row align-items-center justify-content-center pt-4" action="/display.php" method="get">
+        <div class="form-group method mb-3 w-25 pr-4 pl-4">
             <label for="min">Minimum price</label>
             <input type="number" class="form-control" id="min" placeholder="Select a price">
             <small id="numberHelp" class="form-text text-muted">Scroll or enter input manually</small>
         </div>
-        <div class="form-group mb-3 w-25">
+        <div class="form-group mb-3 w-25 pr-4">
             <label for="max">Maximum price</label>
             <input type="number" class="form-control" id="max" placeholder="Select a price">
             <small id="numberHelp" class="form-text text-muted">Scroll or enter input manually</small>
         </div>
-
     </div>
     <div class="input-group-append mb-2 pt-2 justify-content-center">
-        <button class="btn btn-outline-secondary" type="button">Execute Query</button>
+        <button class="btn btn-outline-secondary" type="submit">Execute Query</button>
     </div>
+    </form>
 </div>
 </div>
 
@@ -138,9 +142,9 @@
 </div>-->
 
 <h4 class="pl-5 pt-3">Join Query</h4>
-<h4 class="pl-5"><small>Get account information filtered by exchange names or commodities or both. (Alternative query option: Get all commodities owned by user on a certain exchange)</small></h4>
+<h4 class="pl-5"><small>Get all commodities of a certain type owned by user on a certain exchange. Filter by commodities, exchanges, or both.</small></h4>
 <div class = "row align-items-center justify-content-center pt-4 pl-4">
-    <div class="input-group mb-3 w-25 pb-4">
+    <div class="input-group mb-3 w-25 pb-4 pr-4">
         <select class="custom-select" id="exchange">
             <option selected>Select an exchange...</option>
             <option value="1">CoinSquare</option>
@@ -180,7 +184,7 @@
 
 <h4 class="pl-5"><small>Find a commodity (likely a currency) that is traded on all exchanges in the database (made by people living in Canada).</small></h4>
 <div class = "row align-items-center justify-content-center">
-    <div class="input-group-append mb-2 pt-2 justify-content-center">
+    <div class="input-group-append mb-2 pt-4 justify-content-center">
         <button class="btn btn-outline-secondary" type="button">Execute Query</button>
     </div>
 </div>
