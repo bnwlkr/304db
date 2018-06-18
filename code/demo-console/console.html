@@ -28,10 +28,10 @@
 </div>
 <div class = "query-input">
     <h4 class="pl-5 pt-3">Selection and Projection Queries</h4>
-    <h4 class="pl-5"><small>Shows all of the commodities traded on a particular exchange.</small></h4>
+    <h4 class="pl-5"><small>Gets all of the commodities traded on a particular exchange</small></h4>
     <div class = "row align-items-center justify-content-center">
         <div class="input-group mb-3 w-25 p-4">
-            <select class="custom-select" id="exchange">
+            <select class="custom-select" id="name" name="name" value="selectedOption">
                 <option selected>Select an exchange...</option>
                 <option value="1">CoinSquare</option>
                 <option value="2">Euronext</option>
@@ -42,8 +42,11 @@
                 <option value="7">NASDAQ</option>
                 <option value="8">TCE</option>
             </select>
+            <!--<form action = "/exchanges" method = "get">
+                <input type="submit" name="name" value="selectedOption" />
+            </form>-->
             <div class="input-group-append">
-                <button class="btn btn-outline-secondary" type="button">Run</button>
+                <button class="btn btn-outline-secondary" type="button" formmethod="post" action="/exchanges">Run</button>
             </div>
         </div>
     </div>
@@ -87,7 +90,7 @@
     </div>
     <h4 class="pl-5"><small><strong>BONUS:</strong> Shows all of the commodities between a min and a max price. </small></h4>
     <div class = "row align-items-center justify-content-center pt-4">
-        <div class="form-group action="mb-3 w-25">
+        <div class="form-group method mb-3 w-25">
             <label for="min">Minimum price</label>
             <input type="number" class="form-control" id="min" placeholder="Select a price">
             <small id="numberHelp" class="form-text text-muted">Scroll or enter input manually</small>
@@ -135,7 +138,7 @@
 </div>-->
 
 <h4 class="pl-5 pt-3">Join Query</h4>
-<h4 class="pl-5"><small>Get account information filtered by exchange names or commodities or both.</small></h4>
+<h4 class="pl-5"><small>Get account information filtered by exchange names or commodities or both. (Alternative query option: Get all commodities owned by user on a certain exchange)</small></h4>
 <div class = "row align-items-center justify-content-center pt-4 pl-4">
     <div class="input-group mb-3 w-25 pb-4">
         <select class="custom-select" id="exchange">
@@ -322,33 +325,30 @@
 <h4 class="pl-5 pt-3">Bonus Query</h4>
 
     <h4 class="pl-5"><small>Obtain's the best deal for arbitrage trading (the deal with the biggest difference between prices on different exchanges i.e. with a relatively low price on one exchange and a relatively high price on another exchange).</small></h4>
-    <div class = "row align-items-center justify-content-center">
-            <div class="input-group mb-3 w-25 p-4">
-                <div class="input-group-append">
-                <select class="custom-select" id="inputGroupSelect02">
-                    <option selected></option>
-                    <option value="1">aapl</option>
-                    <option value="2">amzn</option>
-                    <option value="3">brick</option>
-                    <option value="4">btc</option>
-                    <option value="5">cad</option>
-                    <option value="6">eth</option>
-                    <option value="7">fb</option>
-                    <option value="8">goog</option>
-                    <option value="9">iota</option>
-                    <option value="10">ore</option>
-                    <option value="11">sheep</option>
-                    <option value="12">spice</option>
-                    <option value="13">spot</option>
-                    <option value="14">wood</option>
-    </select>
-
-     <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="button">Run</button>
-                </div>
+<div class = "row align-items-center justify-content-center">
+    <div class="input-group mb-3 w-25 p-4">
+        <select class="custom-select" id="commodity">
+            <option selected>Select a commodity...</option>
+            <option value="1">aapl</option>
+            <option value="2">amzn</option>
+            <option value="3">brick</option>
+            <option value="4">btc</option>
+            <option value="5">cad</option>
+            <option value="6">eth</option>
+            <option value="7">fb</option>
+            <option value="8">goog</option>
+            <option value="9">iota</option>
+            <option value="10">ore</option>
+            <option value="11">sheep</option>
+            <option value="12">spice</option>
+            <option value="13">spot</option>
+            <option value="14">wood</option>
+        </select>
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button">Run</button>
         </div>
-        </div>
-
+    </div>
+</div>
     <h4 class="pl-5"><small> Shows user's trades since a certain amount of days ago or all of them </small></h4>
         <div class = "row align-items-center justify-content-center">
             <div class="input-group-append">
