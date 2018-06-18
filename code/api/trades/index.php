@@ -1,3 +1,4 @@
+
 <?php
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -8,23 +9,16 @@ spl_autoload_register(function ($class_name) {
     include '../Classes/'. $class_name . '.php';});
 
 
-$exchange_name = $_GET['exchange_name'];
-$day = $_GET['day'];
+$since = $_GET['since'];
+$user_id = $_GET['user_id'];
 
-//Turn day into seconds.
-$day = $day * 86400;
 
-// CALL SQL
 $sqlbrain = new SQLBrain();
 
-
-if ($day) {
-    $sql = $sqlbrain->do_query("select * from Trade where timestamp > timestamp - '$day'");
-} else if ($exchange_name) {
-    $sql = $sqlbrain->do_query("select * from Trade where exchange_name = '$exchange_name'");
+if ($since) {
+    $sql = $sqlbrain->do_query("select * from Trade where UNIX_TIMESTAMP(timestamp) > $since and user_id=$user_id");
 } else {
-    $sql = $sqlbrain->do_query("select * from Trade");
+    $sql = $sqlbrain->do_query("select * from Trade where user_id = $user_id");
 }
-
 echo json_encode($sql);
 ?>

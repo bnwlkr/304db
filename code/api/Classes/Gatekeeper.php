@@ -39,8 +39,6 @@ class Gatekeeper
         return $this->sqlBrain->do_query("update Account
                                               set value = value + $amount 
                                               where user_id=$user_id and commodity_name='$commodity_name' and exchange_name='$exchange_name'");
-
-
     }
 
 

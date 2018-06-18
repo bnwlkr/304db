@@ -14,6 +14,9 @@ $commodity_name = $_GET['commodity_name'];
 
 $sqlBrain = new SQLBrain();
 
+$query00 = "select Metric.* from Metric join (select Commodity.name, Traded_On.exchange_name from Commodity join 
+                  Traded_On on Commodity.name = Traded_On.commodity_name where not Commodity.name = 'cad') as 
+                  comms on Metric.commodity_name = comms.name and comms.exchange_name = Metric.exchange_name";
 $query10 = "select Metric.* from Metric join (select Commodity.name, Traded_On.exchange_name from Commodity join 
                   Traded_On on Commodity.name = Traded_On.commodity_name where Traded_On.exchange_name='$exchange_name') as 
                   comms on Metric.commodity_name = comms.name and comms.exchange_name = Metric.exchange_name";
@@ -25,8 +28,9 @@ $query11 = "select Metric.* from Metric join (select Commodity.name, Traded_On.e
                   comms on Metric.commodity_name = comms.name and comms.exchange_name = Metric.exchange_name 
                   where Metric.commodity_name='$commodity_name'";
 
-
-if ($exchange_name && !$commodity_name) {  // list all the commodities on a particular exchange
+if (!$exchange_name && !$commodity_name) {
+  $ret = $sqlBrain->do_query($query00);
+} else if ($exchange_name && !$commodity_name) {  // list all the commodities on a particular exchange
     $ret = $sqlBrain->do_query($query10);
 } else if (!$exchange_name && $commodity_name) {
     $ret = $sqlBrain->do_query($query01);

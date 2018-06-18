@@ -10,7 +10,6 @@ spl_autoload_register(function ($class_name) {
 
 $commodity_name = $_GET['commodity_name'];
 
-
 $arbitrager = new Arbitrageur();
 
 if ($commodity_name) {

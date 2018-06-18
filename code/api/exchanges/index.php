@@ -9,7 +9,6 @@ spl_autoload_register(function ($class_name) {
 
 $name = $_GET['name'];
 
-
 $sqlbrain = new SQLBrain();
 
 if ($name) {

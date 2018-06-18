@@ -13,23 +13,7 @@ $exchange_name = $_GET['exchange_name'];
 $commodity_name = $_GET['commodity_name'];
 $total = $_GET['total'];
 $count = $_GET['count'];
-$create = $_GET['create'];
-$fund = $_GET['fund'];
-$amount = $_GET['amount'];
-$avg = $_GET['avg'];
-$min = $_GET['min'];
-$max = $_GET['max'];
 
-
-if ($fund) {
-    $gateKeeper = new Gatekeeper();
-    exit(json_encode($gateKeeper->fund_account($user_id, $commodity_name, $exchange_name, $amount)));
-}
-
-if ($create) {
-    $gateKeeper = new Gatekeeper();
-    exit(json_encode($gateKeeper->create_exchange_account($user_id, $exchange_name)));
-}
 
 $sqlBrain = new SQLBrain();
 
@@ -54,9 +38,6 @@ if ($total) {
 }
 
 echo json_encode($ret);
-
-
-
 
 
 ?>
