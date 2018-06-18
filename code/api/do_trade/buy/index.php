@@ -14,9 +14,10 @@ $exchange_name = $_GET['exchange_name'];
 $quantity = $_GET['quantity'];
 
 $trader = new Trader();
+$gateKeeper = new Gatekeeper();
 
-if (!$trader->has_account($user_id, $exchange_name)) {
-    exit(json_encode("no account"));
+if (!$gateKeeper->has_account($user_id, $exchange_name, $commodity_name)) {
+    exit(json_encode(100));
 }
 
 echo json_encode($trader->buy($user_id, $commodity_name, $exchange_name, $quantity));

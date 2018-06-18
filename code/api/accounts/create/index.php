@@ -17,5 +17,4 @@ $gateKeeper = new Gatekeeper();
 echo json_encode($gateKeeper->create_exchange_account($user_id, $exchange_name));
 
 
-
 ?>

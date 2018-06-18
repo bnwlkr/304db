@@ -19,16 +19,18 @@ class Trader
     function buy ($user_id, $commodity_name, $exchange_name, $quantity) {
         $user_balance = $this->get_balance($exchange_name, 'cad', $user_id);
         $ask = $this->get_ask($exchange_name, $commodity_name);
+        if (!$ask) {return 100;}
         $total = (double)$quantity * $ask;
-        if ($user_balance<$total) { return false;}
+        if ($user_balance<$total) { return 200;}
         $this->create_record($user_id, $commodity_name, $exchange_name, $ask, $quantity, 'buy');
         return true;
     }
 
     function sell  ($user_id, $commodity_name, $exchange_name, $quantity) {
         $commodity_balance = $this->get_balance($exchange_name, $commodity_name, $user_id);
-        if ($commodity_balance<(double)$quantity) {return false;}
+        if ($commodity_balance<(double)$quantity) {return 200;}
         $bid = $this->get_bid($exchange_name, $commodity_name);
+        if (!$bid) {return 100;}
         $this->create_record($user_id, $commodity_name, $exchange_name, $bid, $quantity, 'sell');
         return true;
     }
@@ -41,12 +43,14 @@ class Trader
     function get_ask ($exchange_name, $commodity_name) {
         $result = $this->sqlBrain->do_query("select Metric.ask from Metric join Traded_On on Metric.commodity_name = Traded_On.commodity_name and Metric.exchange_name = Traded_On.exchange_name where 
                                                     Traded_On.exchange_name='$exchange_name' and Traded_On.commodity_name ='$commodity_name'");
+        if (empty($result)) {return false;}
         return (double)$result[0]['ask'];
     }
 
     function get_bid ($exchange_name, $commodity_name) {
         $result = $this->sqlBrain->do_query("select Metric.bid from Metric join Traded_On on Metric.commodity_name = Traded_On.commodity_name and Metric.exchange_name = Traded_On.exchange_name where 
                                                     Traded_On.exchange_name='$exchange_name' and Traded_On.commodity_name ='$commodity_name'");
+        if (empty($result)) {return false;}
         return (double)$result[0]['bid'];
     }
 

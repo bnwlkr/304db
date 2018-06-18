@@ -6,6 +6,9 @@
  * Time: 8:36 PM
  */
 
+spl_autoload_register(function ($class_name) {
+    include '$class_name' . '.php';});
+
 class Gatekeeper
 {
 
@@ -31,15 +34,21 @@ class Gatekeeper
     }
 
     function create_exchange_account($user_id, $exchange_name) {
+        $trader = new Trader();
         return $this->sqlBrain->do_query("insert into Account (user_id, commodity_name, exchange_name) select $user_id, Commodity.name as commodity_name, Traded_On.exchange_name from 
                                             Commodity join Traded_On On Traded_On.commodity_name = Commodity.name where Traded_On.exchange_name='$exchange_name'");
     }
 
     function fund_account ($user_id, $commodity_name, $exchange_name, $amount) {
+        if (!$this->has_account($user_id, $commodity_name, $exchange_name)) {return 100;}
         return $this->sqlBrain->do_query("update Account
                                               set value = value + $amount 
                                               where user_id=$user_id and commodity_name='$commodity_name' and exchange_name='$exchange_name'");
     }
 
+    function has_account ($user_id, $exchange_name, $commodity_name) {
+        $ret = $this->sqlBrain->do_query("select count(*) from Account where user_id=$user_id and exchange_name=$exchange_name and commodity_name=$commodity_name group by commodity_name");
+        return (int)$ret[0]['count(*)'];
+    }
 
 }

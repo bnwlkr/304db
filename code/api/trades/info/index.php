@@ -11,6 +11,7 @@ spl_autoload_register(function ($class_name) {
 $user_id = $_GET['user_id'];
 $biggest = $_GET['biggest'];
 $number = $_GET['number'];
+
 $sqlBrain = new SQLBrain();
 
 if ($biggest) {
