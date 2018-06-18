@@ -12,7 +12,7 @@ $commodity_name = $_GET['commodity_name'];
 $sqlBrain = new SQLBrain();
 
 $query00 = "select Metric.* from Metric join (select Commodity.name, Traded_On.exchange_name from Commodity join 
-                  Traded_On on Commodity.name = Traded_On.commodity_name where not Commodity.name = 'cad') as 
+                  Traded_On on Commodity.name = Traded_On.commodity_name where not Commodity.name = '$commodity_name') as 
                   comms on Metric.commodity_name = comms.name and comms.exchange_name = Metric.exchange_name";
 $query10 = "select Metric.* from Metric join (select Commodity.name, Traded_On.exchange_name from Commodity join 
                   Traded_On on Commodity.name = Traded_On.commodity_name where Traded_On.exchange_name='$exchange_name') as 
