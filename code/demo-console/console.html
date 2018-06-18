@@ -90,12 +90,12 @@
         <div class="form-group mb-3 w-25">
             <label for="min">Minimum price</label>
             <input type="number" class="form-control" id="min" placeholder="Select a price">
-            <small id="emailHelp" class="form-text text-muted">Scroll or enter input manually</small>
+            <small id="numberHelp" class="form-text text-muted">Scroll or enter input manually</small>
         </div>
         <div class="form-group mb-3 w-25">
             <label for="max">Maximum price</label>
             <input type="number" class="form-control" id="max" placeholder="Select a price">
-            <small id="emailHelp" class="form-text text-muted">Scroll or enter input manually</small>
+            <small id="numberHelp" class="form-text text-muted">Scroll or enter input manually</small>
         </div>
 
     </div>
@@ -214,19 +214,22 @@
 </div>
 <h4 class="pl-5 pt-3">Delete Query</h4>
 
-<h4 class="pl-5"><small>Delete User, keep User Trading Data.</small></h4>
+<h4 class="pl-5"><small>Delete the user, and (while?) keep(ing?) the user trading data.</small></h4>
 <div class = "row align-items-center justify-content-center">
-    <div class="input-group mb-3 w-25 p-4">
+        <div class="form-group mb-3 w-25 pt-4">
+            <input type="number" class="form-control" id="max" placeholder="Enter user ID">
+            <small id="numberHelp" class="form-text text-muted">Use scroller or enter input manually</small>
+        </div>
 
-        <button class="btn btn-outline-secondary" type="button">Run</button>
+        <button class="btn btn-outline-secondary mb-3" type="button">Run</button>
 
     </div>
 </div>
 <h4 class="pl-5 pt-3">Update Query</h4>
 
-<h4 class="pl-5"><small>Purchases a commodity in specified quantity from specified exchange.</small></h4>
+<h4 class="pl-5"><small>Purchases a commodity in specified quantity on a specified exchange.</small></h4>
 <div class = "row align-items-center justify-content-center pt-4">
-    <div class="input-group mb-3 w-25 pb-4 pl-4">
+    <div class="input-group mb-3 w-25 pb-4 pl-4 pt-2">
         <select class="custom-select" id="commodity">
             <option selected>Select a commodity...</option>
             <option value="1">aapl</option>
@@ -244,8 +247,11 @@
             <option value="13">spot</option>
             <option value="14">wood</option>
         </select>
+        <div class="form-group mb-3" style="width:12%">
+            <input type="number" class="form-control" id="max" placeholder="#">
+        </div>
     </div>
-    <div class="input-group mb-3 w-25 pb-4 pr-4">
+    <div class="input-group mb-4 w-25 pb-4 pr-4">
         <select class="custom-select" id="exchange">
             <option selected>Select an exchange...</option>
             <option value="1">CoinSquare</option>
@@ -264,11 +270,33 @@
 
 </div>
 
-<h4 class="pl-5"><small>Sells a commodity in specified quantity from specified exchange.</small></h4>
-<div class = "row align-items-center justify-content-center">
-    <div class="input-group mb-3 w-25 p-4">
-        <select class="custom-select" id="inputGroupSelect02">
-            <option selected></option>
+<h4 class="pl-5"><small>Sells a commodity in specified quantity on a specified exchange.</small></h4>
+<div class = "row align-items-center justify-content-center pt-4">
+    <div class="input-group mb-3 w-25 pb-4 pl-4 pt-2">
+        <select class="custom-select" id="commodity">
+            <option selected>Select a commodity...</option>
+            <option value="1">aapl</option>
+            <option value="2">amzn</option>
+            <option value="3">brick</option>
+            <option value="4">btc</option>
+            <option value="5">cad</option>
+            <option value="6">eth</option>
+            <option value="7">fb</option>
+            <option value="8">goog</option>
+            <option value="9">iota</option>
+            <option value="10">ore</option>
+            <option value="11">sheep</option>
+            <option value="12">spice</option>
+            <option value="13">spot</option>
+            <option value="14">wood</option>
+        </select>
+        <div class="form-group mb-3" style="width:12%">
+            <input type="number" class="form-control" id="max" placeholder="#">
+        </div>
+    </div>
+    <div class="input-group mb-4 w-25 pb-4 pr-4">
+        <select class="custom-select" id="exchange">
+            <option selected>Select an exchange...</option>
             <option value="1">CoinSquare</option>
             <option value="2">Euronext</option>
             <option value="3">Kraken</option>
@@ -277,38 +305,11 @@
             <option value="6">Binance</option>
             <option value="7">NASDAQ</option>
             <option value="8">TCE</option>
-
         </select>
         <div class="input-group-append">
-            <select class="custom-select" id="inputGroupSelect02">
-                <option selected></option>
-                <option value="1">aapl</option>
-                <option value="2">amzn</option>
-                <option value="3">brick</option>
-                <option value="4">btc</option>
-                <option value="5">cad</option>
-                <option value="6">eth</option>
-                <option value="7">fb</option>
-                <option value="8">goog</option>
-                <option value="9">iota</option>
-                <option value="10">ore</option>
-                <option value="11">sheep</option>
-                <option value="12">spice</option>
-                <option value="13">spot</option>
-                <option value="14">wood</option>
-            </select>
-
-            <div class="input-group-append">
-
-                <input id="number" type="number">
-
-                <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="button">Run</button>
-                </div>
-            </div>
+            <button class="btn btn-outline-secondary" type="button">Run</button>
         </div>
     </div>
-</div>
 </div>
 </div>
 </div>
