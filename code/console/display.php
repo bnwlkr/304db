@@ -1,7 +1,12 @@
 <?php
 
+
+spl_autoload_register(function ($class_name) {
+    include $class_name . '.php';});
+
+
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, "http://btfd.group/commodities/?exchange_name=QuadrigaCX");
+curl_setopt($ch, CURLOPT_URL, "");
 curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
 $result = json_decode(curl_exec ($ch));
 curl_close ($ch);

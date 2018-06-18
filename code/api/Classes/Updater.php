@@ -9,26 +9,15 @@
 class Updater
 {
 
-    /*
-     * Quadriga:
-     * https://api.quadrigacx.com/v2/ticker?book=eth/btc_cad
-     * returns an json array, bid, ask, volume, etc.
-     *
-     * Things we are trackin
-     *
-     *
-     */
-
-
     private $sqlBrain;
 
-    function start () {
+    public function __construct()
+    {
         $this->sqlBrain = new SQLBrain();
     }
 
-
-    function update_quadriga() {
-
+    function do_update($commodity_name, $exchange_name, $bid, $ask, $volume) {
+            
     }
 
 
