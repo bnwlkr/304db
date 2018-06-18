@@ -5,11 +5,11 @@ spl_autoload_register(function ($class_name) {
 
 $commodity_name = $_GET['commodity_name'];
 $exchange_name = $_GET['exchange_name'];
-$ask = ['ask'];
+$ask = $_GET['ask'];
 $bid = $_GET['bid'];
-$volume = ['volume'];
+$volume = $_GET['volume'];
 
 
 $updater = new Updater();
 
-$updater->do_update($commodity_name, $exchange_name, $bid, $ask, $volume);
+echo json_encode($updater->do_update($commodity_name, $exchange_name, $bid, $ask, $volume));

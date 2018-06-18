@@ -14,5 +14,5 @@ $sqlBrain = new SQLBrain();
 if ($biggest) {
     echo json_encode($sqlBrain->do_query("select timestamp, commodity_name, exchange_name, max(price * quantity) as spent from Trade where user_id=$user_id group by user_id"));
 } else if ($number) {
-    echo json_encode($sqlBrain->do_query("select timestamp, commodity_name, exchange_name, count(*) as nO_trades from Trade where user_id=1 group by user_id"));
+    echo json_encode($sqlBrain->do_query("select count(*) as nO_trades from Trade where user_id=1 group by user_id"));
 }
