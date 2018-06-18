@@ -1,15 +1,16 @@
 <?php
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
+//error_reporting(E_ALL);
 
 
 spl_autoload_register(function ($class_name) {
     include '../Classes/'. $class_name . '.php';});
 
 $commodity_name = $_GET['commodity_name'];
-$universal = $_GET['unviversal'];
+$universal = $_GET['universal'];
+
 
 $arbitrager = new Arbitrageur();
 $sqlBrain = new SQLBrain();
