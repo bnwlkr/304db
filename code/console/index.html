@@ -17,97 +17,84 @@
 
 <div class = "query-input mr-3">
     <h4 class="pl-5 pt-5">Selection and Projection Query</h4>
-<div class = "query-input">
-    <h4 class="pl-5"><small>Search for a particular commodity or for a particular exchange (or for a particular commodity on a particular exchange).</small></h4>
-    <form action="display.php" method="post">
+    <div class = "query-input">
+        <h4 class="pl-5"><small>Search for a particular commodity or for a particular excchange (or for a particular commodity on a particular exchange).</small></h4>
+        <form action="display.php" method="post">
 
-        <div class = "row align-items-center justify-content-center pt-4">
-            <div class="mb-3 w-25 pr-4">
-                <input type="text" id ="commodity_name" class="form-control" name="commodity_name" placeholder="Commodity">
-                <input type="hidden" name="base" id="1" value="http://btfd.group/commodities/"/>
-                <small id="numberHelp" class="form-text text-muted">Can be left blank</small>
+            <div class = "row align-items-center justify-content-center pt-4">
+                <div class="mb-3 w-25 pr-4">
+                    <input type="text" id ="commodity_name" class="form-control" name="commodity_name" placeholder="Commodity">
+                    <input type="hidden" name="base" id="1" value="http://btfd.group/commodities/"/>
+                    <small id="numberHelp" class="form-text text-muted">Can be left blank</small>
 
+                </div>
+                <div class="mb-3 w-25 pl-4">
+                    <input type="text" class="form-control" id="exchange_name" name="exchange_name" placeholder="Exchange">
+                    <small id="numberHelp" class="form-text text-muted">Can be left blank</small>
+                </div>
             </div>
-            <div class="mb-3 w-25 pl-4">
-                <input type="text" class="form-control" id="exchange_name" name="exchange_name" placeholder="Exchange">
-                <small id="numberHelp" class="form-text text-muted">Can be left blank</small>
+            <div class="input-group-append mb-2 pt-2 pb-4 justify-content-center">
+                <<<<<<< HEAD
+                <button class="btn btn-outline-secondary" type="submit" name="test" id="commodities">Execute Query</button>
+                =======
+                <button class="btn btn-outline-secondary" type="submit">Execute Query</button>
+                >>>>>>> d5ebe9c4b6ad4d0384f49e5e25ac4d865b30b84b
             </div>
-        </div>
-        <div class="input-group-append mb-2 pt-2 pb-4 justify-content-center">
-<<<<<<< HEAD
-            <button class="btn btn-outline-secondary" type="submit" name="test" id="commodities">Execute Query</button>
-=======
-            <button class="btn btn-outline-secondary" type="submit">Execute Query</button>
->>>>>>> d5ebe9c4b6ad4d0384f49e5e25ac4d865b30b84b
-        </div>
-    </form>
-    <h4 class="pl-5"><small>Shows all of the commodities between a min and a max price. </small></h4>
-    <form action="display.php" method="get">
-        <div class = "row align-items-center justify-content-center pt-4" action="/display.php" method="get">
-            <div class="mb-3 w-25 pr-4">
-                <label for="min">Minimum price</label>
-                <input type="number" class="form-control" id="min" placeholder="Select a price">
-                <small id="numberHelp" class="form-text text-muted">Scroll or enter input manually</small>
+        </form>
+        <h4 class="pl-5"><small>Shows all of the commodities between a min and a max price. </small></h4>
+        <form action="display.php" method="get">
+            <div class = "row align-items-center justify-content-center pt-4" action="/display.php" method="get">
+                <div class="mb-3 w-25 pr-4">
+                    <label for="min">Minimum price</label>
+                    <input type="number" class="form-control" id="min" placeholder="Select a price">
+                    <small id="numberHelp" class="form-text text-muted">Scroll or enter input manually</small>
+                </div>
+                <div class="mb-3 w-25 pl-4">
+                    <label for="max">Maximum price</label>
+                    <input type="number" class="form-control" id="max" placeholder="Select a price">
+                    <small id="numberHelp" class="form-text text-muted">Scroll or enter input manually</small>
+                </div>
             </div>
-            <div class="mb-3 w-25 pl-4">
-                <label for="max">Maximum price</label>
-                <input type="number" class="form-control" id="max" placeholder="Select a price">
-                <small id="numberHelp" class="form-text text-muted">Scroll or enter input manually</small>
+            <div class="input-group-append mb-2 pt-2 justify-content-center">
+                <button class="btn btn-outline-secondary" type="submit">Execute Query</button>
             </div>
-        </div>
-        <div class="input-group-append mb-2 pt-2 justify-content-center">
-            <button class="btn btn-outline-secondary" type="submit">Execute Query</button>
-        </div>
-    </form>
-</div>
+        </form>
+    </div>
 </div>
 <h4 class="pl-5"><small>Gets all user trades since a particular point in time.</small></h4>
 
 
 <form action="display.php" method="post">
-<div class = "row align-items-center justify-content-center">
-    <div class="mb-3 w-25 pt-5">
-        <input type="date" class="form-control" name="timestamp" placeholder="Date">
-        <input type="hidden" name="base" id="2" value="http://btfd.group/trades/"/>
-        <input type="hidden" name="user_id" id="3" value="1"/>
+    <div class = "row align-items-center justify-content-center">
+        <div class="mb-3 w-25 pt-5">
+            <input type="date" class="form-control" name="timestamp" placeholder="Date">
+            <input type="hidden" name="base" id="2" value="http://btfd.group/trades/"/>
+            <input type="hidden" name="user_id" id="3" value="1"/>
+        </div>
     </div>
-</div>
-<div class="input-group-append mb-4 pt-4 justify-content-center">
-    <button class="btn btn-outline-secondary" id="trades" name = "different" type="submit">Execute Query</button>
-</div>
+    <div class="input-group-append mb-4 pt-4 justify-content-center">
+        <button class="btn btn-outline-secondary" id="trades" name = "different" type="submit">Execute Query</button>
+    </div>
 </form>
 
 
 
 <h4 class="pl-5 pt-3">Join Query</h4>
 <h4 class="pl-5"><small>Get all commodities owned by user of a certain type on a certain exchange. Perform the filter using commodities, exchanges, or both.</small></h4>
-<form action="display.php" method="post">
 <div class = "row align-items-center justify-content-center pt-5" action="/display.php" method="get">
-<<<<<<< HEAD
-        <div class="form-group mb-3 w-25 pr-4">
-            <input type="text" class="form-control" id="commodity_name" placeholder="Enter a commodity">
-=======
-        <div class="mb-3 w-25 pr-4">
-            <input type="text" class="form-control" id="min" placeholder="Enter a commodity">
->>>>>>> 07f5a694ee408392d7cdc00c3f5a7fd0b21bb211
-            <small id="numberHelp" class="form-text text-muted">Can be left blank</small>
-            <input type="hidden" name="base" value="http://btfd.group/commodities/"/>
-        </div>
-<<<<<<< HEAD
-        <div class="form-group mb-3 w-25 pl-4">
-            <input type="text" class="form-control" id="exchange_name" placeholder="Enter an exchange">
-=======
-        <div class="mb-3 w-25 pl-4">
-            <input type="text" class="form-control" id="max" placeholder="Enter an exchange">
->>>>>>> 07f5a694ee408392d7cdc00c3f5a7fd0b21bb211
-            <small id="numberHelp" class="form-text text-muted">Can be left blank</small>
-            <input type="hidden" name="base" value="http://btfd.group/commodities/"/>
-        </div>
+    <div class="mb-3 w-25 pr-4">
+        <input type="text" class="form-control" id="min" placeholder="Enter a commodity">
+        <small id="numberHelp" class="form-text text-muted">Can be left blank</small>
+    </div>
+    <div class="mb-3 w-25 pl-4">
+        <input type="text" class="form-control" id="max" placeholder="Enter an exchange">
+        <small id="numberHelp" class="form-text text-muted">Can be left blank</small>
+    </div>
 </div>
 <form action="display.php" method="get">
-<div class="input-group-append mb-2 pt-2 pb-4 justify-content-center">
-    <button class="btn btn-outline-secondary" type="submit">Execute Query</button>
-</div>
+    <div class="input-group-append mb-2 pt-2 pb-4 justify-content-center">
+        <button class="btn btn-outline-secondary" type="submit">Execute Query</button>
+    </div>
 </form>
 <h4 class="pl-5 pt-3">Division Query</h4>
 
@@ -166,13 +153,13 @@
 <h4 class="pl-5 pt-3">Delete Query</h4>
 
 <h4 class="pl-5"><small>Delete a user, except for their trading record data.</small></h4>
-    <div class="input-group-append mb-4 pt-5 justify-content-center">
-        <button class="btn btn-outline-secondary" type="button">Execute Query</button>
-    </div>
+<div class="input-group-append mb-4 pt-5 justify-content-center">
+    <button class="btn btn-outline-secondary" type="button">Execute Query</button>
+</div>
 <h4 class="pl-5 pt-4">Update Query</h4>
 
 <h4 class="pl-5"><small>Purchases a specified commodity in a specified quantity on a specified exchange.</small></h4>
-<div class = "row align-items-center justify-content-center pt-5">
+<div class = "row align-items-center justify-content-center pt-4">
     <div class="input-group mb-3 w-25 pb-4 pl-4 pt-2">
         <select class="custom-select" id="commodity">
             <option selected>Select a commodity...</option>
@@ -215,7 +202,7 @@
 </div>
 
 <h4 class="pl-5"><small>Sells a specified commodity in specified quantity on a specified exchange.</small></h4>
-<div class = "row align-items-center justify-content-center pt-5">
+<div class = "row align-items-center justify-content-center pt-4">
     <div class="input-group mb-3 w-25 pb-4 pl-4 pt-2">
         <select class="custom-select" id="commodity">
             <option selected>Select a commodity...</option>
@@ -259,22 +246,38 @@
 
 <h4 class="pl-5"><small>Obtain's the best deal for arbitrage trading (the deal with the biggest difference between prices on different exchanges i.e. with a relatively low price on one exchange and a relatively high price on another exchange).</small></h4>
 <div class = "row align-items-center justify-content-center">
-    <div class="form-group mb-3 w-25 pt-5">
-        <input type="text" class="form-control" id="trades" placeholder="Commodity">
+    <div class="input-group mb-3 w-25 p-4">
+        <select class="custom-select" id="commodity">
+            <option selected>Select a commodity...</option>
+            <option value="1">aapl</option>
+            <option value="2">amzn</option>
+            <option value="3">brick</option>
+            <option value="4">btc</option>
+            <option value="5">cad</option>
+            <option value="6">eth</option>
+            <option value="7">fb</option>
+            <option value="8">goog</option>
+            <option value="9">iota</option>
+            <option value="10">ore</option>
+            <option value="11">sheep</option>
+            <option value="12">spice</option>
+            <option value="13">spot</option>
+            <option value="14">wood</option>
+        </select>
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button">Run</button>
+        </div>
     </div>
 </div>
-    <div class="input-group-append pb-5 pt-4 justify-content-center">
-        <button class="btn btn-outline-secondary" type="button">Execute Query</button>
-    </div>
-    </div>
-<h4 class="pl-5"><small>Shows user's trades since a certain amount of days ago or all of them.</small></h4>
+<h4 class="pl-5"><small> Shows user's trades since a certain amount of days ago or all of them </small></h4>
 <div class = "row align-items-center justify-content-center">
-    <div class="form-group mb-3 w-25 pt-5">
-        <input type="number" class="form-control" id="trades" placeholder="Number of days in the past">
-    </div>
-</div>
-    <div class="input-group-append mb-5 pb-5 pt-4 justify-content-center">
-        <button class="btn btn-outline-secondary" type="button">Execute Query</button>
+    <div class="input-group-append">
+        <input id="number" type="number">
+
+
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button">Run</button>
+        </div>
     </div>
 </div>
 </div>
