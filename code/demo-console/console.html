@@ -11,6 +11,7 @@
     <script type="text/javascript" src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">-->
 </head>
 <body style="height:100%; width: 100%">
 <div class = "container-fluid w-75">
@@ -31,7 +32,7 @@
     <h4 class="pl-5"><small>Get all of the commodities traded on a particular exchange.</small></h4>
     <div class = "row align-items-center justify-content-center">
 
-        <div class="input-group mb-3 w-25 p-4">
+        <div class="input-group mb-3 w-25 pt-4 pb-4">
             <form action="/display.php" method="get">
             <select class="custom-select" id="exchange1" name="name" value="submit">
                 <option selected>Select an exchange...</option>
@@ -111,8 +112,6 @@
     </form>
 </div>
 </div>
-
-<!--<h4 class="pl-5 pt-3">Projection Query</h4>
 <h4 class="pl-5"><small>Gets all user trades since a particular point in time.</small></h4>
 <div class = "row align-items-center justify-content-center">
 
@@ -127,19 +126,15 @@
                 });
             </script>
         </div>
+    </div>-->
+
+    <div class="form-group mb-3 w-25">
+        <input type="date" class="form-control" id="trades">
     </div>
-    <div class="input-group mb-3 w-25 p-4">
-        <select class="custom-select" id="inputGroupSelect02">
-            <option selected></option>
-            <option value="1">NYSE</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-        </select>
-        <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button">Run</button>
-        </div>
+    <div class="input-group-append mb-3 w-25">
+        <button class="btn btn-outline-secondary" type="button">Run</button>
     </div>
-</div>-->
+</div>
 
 <h4 class="pl-5 pt-3">Join Query</h4>
 <h4 class="pl-5"><small>Get all commodities of a certain type owned by user on a certain exchange. Filter by commodities, exchanges, or both.</small></h4>
@@ -209,7 +204,7 @@
 <h4 class="pl-5 pt-3">Nested Aggregation Query</h4>
 <h4 class="pl-5"><small>Perform a nested aggregation query of selected type combination on ask prices of all commodities</small></h4>
 <div class = "row align-items-center justify-content-center pt-4">
-    <div class="input-group mb-3 w-25 pl-4">
+    <div class="input-group mb-3 w-25 pr-4 pl-4">
         <select class="custom-select" id="inputGroupSelect02">
             <option selected>max</option>
             <option value="1">min</option>
