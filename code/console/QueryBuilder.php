@@ -10,14 +10,11 @@ class QueryBuilder
 {
     function construct ($params) {
         $result = $params['base'] . "?";
-        array_slice($params, 1);
+        unset($params['base']);
         foreach ($params as $key => $value) {
             $result .= $key . "=" . $value ."&";
         }
         return $result;
     }
-
-
-
 
 }
