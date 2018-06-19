@@ -3,25 +3,25 @@
 spl_autoload_register(function ($class_name) {
     include $class_name . '.php';});
 
-var_dump($_POST);
-
 if ($_POST['timestamp']) {
     $_POST['timestamp'] = strtotime($_POST['timestamp']);
 }
-
 
 
 $query_builder = new QueryBuilder();
 
 $url = $query_builder->construct($_POST);
 
-var_dump($url);
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
 $result = json_decode(curl_exec ($ch));
 curl_close ($ch);
+
+if ($_POST['move'] != null) {
+    echo "Success";
+}
 
 echo "
 <style>
@@ -32,6 +32,7 @@ table, th, td {
 ";
 
 $result_variable_names = array_keys(get_object_vars($result[0]));
+
 
 echo '<table>';
 echo '<tr>';

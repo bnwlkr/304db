@@ -4,19 +4,18 @@ spl_autoload_register(function ($class_name) {
     include '../Classes/'. $class_name . '.php';});
 
 
-$minAvg = $_GET['minAvg'];
-$maxAvg = $_GET['maxAvg'];
+$Avg = $_GET['Avg'];
 $ftq = $_GET['ftq'];
 
 
 
 $sqlBrain = new SQLBrain();
 
-if ($minAvg) {
+if ("$Avg" == "minAvg") {
     $ret = $sqlBrain->do_query("select commodity_name, min(ask) from(select commodity_name, avg(ask) ask from Metric where commodity_name <> 'cad' group by commodity_name order by ask asc) as T");
     echo json_encode($ret);
 
-} else if ($maxAvg) {
+} else if ("$Avg" == "maxAvg") {
     $ret = $sqlBrain->do_query("select commodity_name, max(ask) from(select commodity_name, avg(ask) ask from Metric where commodity_name <> 'cad' group by commodity_name order by ask desc) as T");
 
     echo json_encode($ret);

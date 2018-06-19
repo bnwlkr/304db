@@ -47,7 +47,9 @@ class Gatekeeper
     }
 
     function has_account ($user_id, $exchange_name, $commodity_name) {
-        $ret = $this->sqlBrain->do_query("select count(*) from Account where user_id=$user_id and exchange_name=$exchange_name and commodity_name=$commodity_name group by commodity_name");
+        $ret = $this->sqlBrain->do_query("select count(*) from Account where user_id=$user_id and exchange_name='$exchange_name' and commodity_name='$commodity_name' group by commodity_name");
+        $result = (int)$ret[0]['count(*)'];
+        var_dump($result);
         return (int)$ret[0]['count(*)'];
     }
 
