@@ -7,6 +7,6 @@ $user_id=$_GET['user_id'];
 
 $sqlBrain = new SQLBrain();
 
-echo json_encode($sqlBrain->do_query("delete from User where user_id = '$user_id'"));
+echo json_encode($sqlBrain->do_query("delete from User where id = '$user_id'"));
 
 ?>
