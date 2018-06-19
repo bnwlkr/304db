@@ -14,17 +14,17 @@
     <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">-->
 </head>
 
-<H1>BTFD Demo Console</H1>
 <div class = "query-input">
     <h4 class="pl-5"><small>Search for a particular commodity or for a particular excchange (or for a particular commodity on a particular exchange).</small></h4>
     <form action="display.php" method="post">
-        <div class = "row align-items-center justify-content-center pt-4" action="/display.php" method="get">
+        <div class = "row align-items-center justify-content-center pt-4">
             <div class="form-group mb-3 w-25 pr-4">
-                <input type="text" class="form-control" id="min" name="test" placeholder="Enter a commodity">
+                <input type="text" class="form-control" name="commodity_name" placeholder="Commodity">
                 <small id="numberHelp" class="form-text text-muted">Can be left blank</small>
+                <input type="hidden" name="base" value="http://btfd.group/commodities/"/>
             </div>
             <div class="form-group mb-3 w-25 pl-4">
-                <input type="text" class="form-control" id="max" placeholder="Enter an exchange">
+                <input type="text" class="form-control" name="exchange_name" placeholder="Exchange">
                 <small id="numberHelp" class="form-text text-muted">Can be left blank</small>
             </div>
         </div>
@@ -32,7 +32,7 @@
             <button class="btn btn-outline-secondary" type="submit">This one</button>
         </div>
     </form>
-    <h4 class="pl-5"><small><strong>BONUS:</strong> Shows all of the commodities between a min and a max price. </small></h4>
+    <h4 class="pl-5"><small>Shows all of the commodities between a min and a max price. </small></h4>
     <form action="display.php" method="get">
         <div class = "row align-items-center justify-content-center pt-4" action="/display.php" method="get">
             <div class="form-group mb-3 w-25 pr-4">
