@@ -3,20 +3,16 @@
 spl_autoload_register(function ($class_name) {
     include $class_name . '.php';});
 
-
-var_dump($_POST);
-
 $query_builder = new QueryBuilder();
 
 $url = $query_builder->construct($_POST);
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, "");
+curl_setopt($ch, CURLOPT_URL, $url);
 curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
 $result = json_decode(curl_exec ($ch));
 curl_close ($ch);
 
-//var_dump($result);
 echo "
 <style>
 table, th, td {
