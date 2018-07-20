@@ -6,6 +6,7 @@
  * Time: 1:39 PM
  */
 
+    // builds query for API from form-data provided by console
 class QueryBuilder
 {
     function construct ($params) {
