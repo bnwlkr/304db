@@ -1,3 +1,7 @@
 # 304db
 
-to edit the ER diagram, open part2/er_diagram.xml on [draw.io](https://www.draw.io)
+backend for a financial portfolio application, built for UBC CPSC 304.
+
+ER Diagram:
+
+![](part2/er_diagram.png)
